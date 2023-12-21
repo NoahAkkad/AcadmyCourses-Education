@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="name">
+    <h1 class="page-title">AcadmyCourses <br> <span>Education</span></h1>
+</div>
+<div class="header">
+    <div class="nav">
+        <ul class="navigation">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+            <li>@Html.ActionLink("Privacy", "Privacy", "Home")</li>
+        </ul>
+    <p class="header-text">It's not too <br> late to apply</p>
+    </div>
+</div>
+
+<div class="welcome-content">
+    <h2 class="welcome"> @ViewBag.welcome</h2>
+    <p>@ViewBag.message</p>
+</div>
+
+<div class="footer-cotent">
+    <div class="footer-up">
+        <div class="name">
+            <h1 class="page-title-footer">AcadmyCourses <br> <span>Education</span></h1>
+        </div>
+        <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-down">
+        <p>
+            AcadmyCourses@gmail.com | 0700551099 | Nasaret,Varberg
+        </p>
+    </div>
+</div>

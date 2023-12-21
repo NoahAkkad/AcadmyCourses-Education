@@ -1,0 +1,71 @@
+﻿@model List<CoursesAppMVC.Models.CourseItem>
+
+@{
+    ViewData["Title"] = "Courses Available";
+}
+
+<div class="name">
+    <h1 class="page-title">AcadmyCourses <br> <span>Education</span></h1>
+</div>
+<div class="nav">
+    <ul class="navigation">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+        <li>@Html.ActionLink("Privacy", "Privacy", "Home")</li>
+    </ul>
+</div>
+
+<h1 class="course-available">Courses Available</h1>
+<p><a asp-action="Create" class="btn btn-success">Create New</a></p>
+<div class="courses-content">
+    
+    @*Razor code that dynamically lists courses found in the Courses property of the viewbag*@
+    @foreach (var course in Model)
+    {
+        <div class="course">
+            <div class="course-text">
+                <h2 class="course-name">@course.Title:</h2>
+                <ul>
+                    Course Name:
+                    <li>@course.Description</li>
+                </ul>
+                <br>
+                <ul>
+                    Start Date:
+                    <li>@course.StartDate</li>
+                </ul>
+                <br>
+                <ul>
+                    End Date:
+                    <li>@course.EndDate</li>
+                </ul>
+                <ul>
+                    <li>
+                        <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary">Edit </a>
+                        <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="footer-cotent">
+    <div class="footer-up">
+        <div class="name">
+            <h1 class="page-title-footer">AcadmyCourses <br><span>Education</span></h1>
+        </div>
+        <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-down">
+        <p>
+            AcadmyCourses@gmail.com | 0700551099 | Nasaret,Varberg
+        </p>
+    </div>
+</div>
+
