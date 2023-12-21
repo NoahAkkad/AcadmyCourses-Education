@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+
+
 namespace CoursesAppMVC.Models
 {
     public class DateRangeAttribute : RangeAttribute
@@ -29,5 +31,8 @@ namespace CoursesAppMVC.Models
         [Required(ErrorMessage = "End date is required.")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
+
+
+        
     }
 }
